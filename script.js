@@ -1,5 +1,6 @@
 ﻿const money = prompt(`Ваш бюджет на месяц?`, ``);
 const time = prompt(`Введите дату в формате YYYY-MM-DD`, ``);
+//Here you are
 
 const appData = {
     budget: money,
