@@ -13,16 +13,16 @@ const appData = {
 
 
 
-for(let i = 0; i < 2; i++) {
+for (let i = 0; i < 2; i++) {
     let a = prompt(`Введите обязательную статью расходов в этом месяце`, ``),
         b = prompt(`Во сколько обойдется?`, ``);
-    
-    if( (a !== '' && a !== null && a.length < 50 ) && (b !== '' && b !== null) ) {
-       appData.expenses[a] = b; 
-       } else i--;
 
-    
-    
-}
+    if ((a !== '' && a !== null && a.length < 50) && (b !== '' && b !== null && b.length < 50)) {
+        appData.expenses[a] = b;
+    } else i--;
 
-alert(appData.budget / 30);
+};
+
+appData.moneyPerDay = appData.budget / 30;
+
+alert(`Ежедневный бюджет ${appData.moneyPerDay}`);
